@@ -1,7 +1,7 @@
-Face Detection Module for Webduino
+Face Tracker Module for Webduino
 ==========================
 
-This module provides a way to do real-time detection by [pico.js](https://github.com/tehnokv/picojs)
+This module provides a way to do real-time face tracking by [pico.js](https://github.com/tehnokv/picojs)
 
 Usage
 ------
