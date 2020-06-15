@@ -1,0 +1,1 @@
+MSG.catFaceDetectPico = "人臉偵測";
