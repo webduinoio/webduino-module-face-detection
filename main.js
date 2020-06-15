@@ -1,6 +1,8 @@
 +(function (window, document) {
   'use strict';
 
+  const BASE_URL = 'https://webduinoio.github.io/webduino-module-face-tracker';
+
   function addHTMLContent() {
     const container = document.createElement('div');
     const wrapper = document.createElement('div');
@@ -244,12 +246,12 @@
       if (inited) return;
       inited = true;
 
-      fetch('http://127.0.0.1:8080/wasmpico.wasm').then(function(response) {
+      fetch(BASE_URL + '/wasmpico.wasm').then(function(response) {
         response.arrayBuffer().then(function(buffer) {
           WebAssembly.compile(buffer).then(function() {
             // the script 'wasmpico.js' will instantiate this object once the 'wasmpico.wasm' loads
             var script  = document.createElement('script');
-            script.src  = 'http://127.0.0.1:8080/wasmpico.js';
+            script.src  = BASE_URL + '/wasmpico.js';
             script.type = 'text/javascript';
             script.defer = true;
             document.getElementsByTagName('head').item(0).appendChild(script);

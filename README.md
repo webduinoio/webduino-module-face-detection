@@ -8,6 +8,6 @@ Usage
 
 Import module to your project
 
-    https://webduinoio.github.io/webduino-module-face-detection/blockly.json
+    https://webduinoio.github.io/webduino-module-face-tracker/blockly.json
 
 **Notice**: This module is only available for browser.

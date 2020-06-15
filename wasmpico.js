@@ -1,3 +1,4 @@
+var BASE_URL = "https://webduinoio.github.io/webduino-module-face-tracker";
 var Module = typeof Module !== "undefined" ? Module : {};
 var moduleOverrides = {};
 var key;
@@ -361,7 +362,7 @@ function isDataURI(filename) {
 
 function integrateWasmJS() {
   var wasmTextFile = "wasmpico.wast";
-  var wasmBinaryFile = "http://127.0.0.1:8080/wasmpico.wasm";
+  var wasmBinaryFile = BASE_URL + "/wasmpico.wasm";
   var asmjsCodeFile = "wasmpico.temp.asm.js";
   if (typeof Module["locateFile"] === "function") {
     if (!isDataURI(wasmTextFile)) {
