@@ -53,10 +53,10 @@ Blockly.Blocks['facedetect_pico_get_value'] = {
     this.appendDummyInput()
         .appendField(Blockly.Msg.FaceDetectPico_VALUES_TEXT2)
         .appendField(new Blockly.FieldDropdown([
-          ["X 座標", Blockly.Msg.FaceDetectPico_VALUES_X],
-          ["Y 座標", Blockly.Msg.FaceDetectPico_VALUES_Y],
-          ["寬度", Blockly.Msg.FaceDetectPico_VALUES_WIDTH],
-          ["高度", Blockly.Msg.FaceDetectPico_VALUES_HEIGHT]
+          [Blockly.Msg.FaceDetectPico_VALUES_X, "x"],
+          [Blockly.Msg.FaceDetectPico_VALUES_Y, "y"],
+          [Blockly.Msg.FaceDetectPico_VALUES_WIDTH, "width"],
+          [Blockly.Msg.FaceDetectPico_VALUES_HEIGHT, "height"]
         ]), "props");
     this.setInputsInline(true);
     this.setOutput(true, null);
