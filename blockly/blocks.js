@@ -1,9 +1,12 @@
 Blockly.Blocks['facedetect_pico_show_square'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown([["顯示","true"], ["隱藏","false"]]), "display")
-        .appendField("人臉 & 顏色追蹤")
-        .appendField("的方塊");
+        .appendField(new Blockly.FieldDropdown([
+          [Blockly.Msg.FaceDetectPico_SQUARE_SHOW, "true"],
+          [Blockly.Msg.FaceDetectPico_SQUARE_HIDDEN, "false"]
+        ]), "display")
+        .appendField(Blockly.Msg.FaceDetectPico)
+        .appendField(Blockly.Msg.FaceDetectPico_SQUARE_FINAL_TEXT);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(210);
@@ -15,10 +18,11 @@ Blockly.Blocks['facedetect_pico_show_square'] = {
 Blockly.Blocks['facedetect_pico_set_opacity'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("設定人臉追蹤");
+        .appendField(Blockly.Msg.FaceDetectPico_SET)
+        .appendField(Blockly.Msg.FaceDetectPico);
     this.appendValueInput("OPACITY")
         .setCheck(null)
-        .appendField("的透明度為");
+        .appendField(Blockly.Msg.FaceDetectPico_OPACITY);
     this.appendDummyInput()
         .appendField("(0~100)");
     this.setInputsInline(true);
@@ -33,7 +37,7 @@ Blockly.Blocks['facedetect_pico_set_opacity'] = {
 Blockly.Blocks['facedetect_pico_get_count'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("人臉數量");
+        .appendField(Blockly.Msg.FaceDetectPico_COUNT_FACE);
     this.setOutput(true, null);
     this.setColour(230);
     this.setTooltip("");
@@ -45,10 +49,15 @@ Blockly.Blocks['facedetect_pico_get_value'] = {
   init: function() {
     this.appendValueInput("INDEX")
         .setCheck(null)
-        .appendField("追蹤第");
+        .appendField(Blockly.Msg.FaceDetectPico_VALUES_TEXT1);
     this.appendDummyInput()
-        .appendField("個人臉的")
-        .appendField(new Blockly.FieldDropdown([["X 座標","x"], ["Y 座標","y"], ["寬度","width"], ["高度","height"]]), "props");
+        .appendField(Blockly.Msg.FaceDetectPico_VALUES_TEXT2)
+        .appendField(new Blockly.FieldDropdown([
+          ["X 座標", Blockly.Msg.FaceDetectPico_VALUES_X],
+          ["Y 座標", Blockly.Msg.FaceDetectPico_VALUES_Y],
+          ["寬度", Blockly.Msg.FaceDetectPico_VALUES_WIDTH],
+          ["高度", Blockly.Msg.FaceDetectPico_VALUES_HEIGHT]
+        ]), "props");
     this.setInputsInline(true);
     this.setOutput(true, null);
     this.setColour(230);

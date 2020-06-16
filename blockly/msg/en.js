@@ -1,1 +1,1 @@
-MSG.catFaceDetectPico = "Face Detection";
+MSG.catFaceDetectPico = "Face Tracker";
